@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        海大壘球聯盟
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style type="text/css">
+        #customers {
+            border-collapse: collapse;
+            font-size: 2vw;
+            width: 90%;
+        }
+        
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+        
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #009494;
+            color: white;
+        }
+        
+        p.top1 {
+            background-color: #282828;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            color: White;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: "malgun gothic", simhei;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav:hover ul {
+            display: block;
+        }
+        
+        nav ul li {
+            font-family: "malgun gothic", simhei;
+            border-top: 2px solid Navy;
+            background-color: white;
+            width: 100%;
+            color: black;
+        }
+        
+        nav ul li:hover {
+            background-color: PowderBlue;
+        }
+        
+        nav a {
+            font-family: "malgun gothic", simhei;
+            color: White;
+        }
+        
+        div.example {
+            font-family: "malgun gothic", simhei;
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+            border: 2px solid #00B2B2;
+            text-align: center;
+            background-color: #00B2B2;
+            float: left;
+            padding: 10px;
+            width: 16.666%;
+            box-sizing: border-box;
+        }
+        
+        div.example:hover:not(.active) {
+            background-color: #00A3A3;
+        }
+        /*div.demo {}*/
+        
+        div.top1 {
+            background-color: #282828;
+            margin: 0;
+            padding: 0;
+        }
+        
+        div.b {
+            padding: 10px;
+        }
+        
+        div.score {
+            width: 80%;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #008866;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 5px;
+            width: 130px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
+        select {
+            width: 130px;
+            font-size: 20px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            div.example {
+                font-weight: bold;
+                color: white;
+                border: 2px solid #00B2B2;
+                text-align: center;
+                background-color: #00B2B2;
+                float: middle;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+    <link href="海大校徽.ico" rel="SHORTCUT ICON">
+</head>
+<script>
+    function start() {
+        document.getElementById("a1").addEventListener("click", a);
+        document.getElementById("b1").addEventListener("click", b);
+        document.getElementById("c1").addEventListener("click", c);
+        document.getElementById("d1").addEventListener("click", d);
+        document.getElementById("e1").addEventListener("click", e);
+        document.getElementById("f1").addEventListener("click", f);
+        document.getElementById("school").addEventListener("click", school);
+    }
+
+    function school() {
+        document.location.href = "index.html";
+    }
+
+    function a() {
+        document.location.href = "a.html";
+    }
+
+    function b() {
+        document.location.href = "b.html";
+    }
+
+    function c() {
+        document.location.href = "c.html";
+    }
+
+    function d() {
+        document.location.href = "d.html";
+    }
+
+    function e() {}
+
+
+    function f() {
+        document.location.href = "f.html";
+    }
+    window.addEventListener("load", start, false);
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+    <div style="text-align:center;" class="top1">
+        <p class="top1"><br>
+        </p>
+        <img id="school" style="z-index:1; width:150px; height: 150px;" src="海大校徽.gif" title="返回首頁">
+        <h1>海大壘球聯盟</h1>
+    </div>
+    <div class="example" id="a1" style=" cursor: pointer;">
+        <nav id="a" ; class="fas fa-bars" ;font-family: "malgun gothic", simhei;> 比分/賽程</nav>
+    </div>
+    <div class="example" id="b1" style=" cursor: pointer; background-color: #00A3A3;">
+        <nav id="b" ; class="fas fa-signal" ;font-family: "malgun gothic", simhei;> 戰績</nav>
+    </div>
+    <div class="example" id="c1" style=" cursor: pointer;">
+        <nav id="c" ; class="fas fa-sitemap" ;font-family: "malgun gothic", simhei;> 球隊資訊</nav>
+        </nav>
+    </div>
+    <div class="example" id="d1" style=" cursor: pointer;">
+        <nav id="d" ; class="fas fa-address-card" ;font-family: "malgun gothic", simhei;> 球員資訊</nav>
+        </nav>
+    </div>
+    <div class="example" id="e1" style=" cursor: pointer;">
+        <nav id="e" ; class="fab fa-facebook-square"><a href="https://www.facebook.com/ntousoftball/" target="_blank"> FB粉專</a></nav>
+        </nav>
+    </div>
+    <div class="example" id="f1" style=" cursor: pointer;">
+        <nav id="f" ; class="fas fa-wrench" ;font-family: "malgun gothic", simhei;> 管理員專區</nav>
+        </nav>
+    </div>
+    <div id="demo" align="center">
+        <p><br></p>
+        <p><br></p>
+        <table id='customers'>
+            <tr>
+                <th>排名</th>
+                <th>隊名</th>
+                <th>勝</th>
+                <th>敗</th>
+                <th>和</th>
+                <th>勝率</th>
+                <th>積分</th>
+                <th>得分</th>
+                <th>失分</th>
+                <th>得分差</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>河工</td>
+                <td>11</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0.916</td>
+                <td>33</td>
+                <td>68</td>
+                <td>17</td>
+                <td>51</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>航管</td>
+                <td>10</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0.833</td>
+                <td>30</td>
+                <td>76</td>
+                <td>27</td>
+                <td>49</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>運輸</td>
+                <td>9</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0.750</td>
+                <td>27</td>
+                <td>73</td>
+                <td>38</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>機械</td>
+                <td>8</td>
+                <td>2</td>
+                <td>2</td>
+                <td>0.666</td>
+                <td>26</td>
+                <td>62</td>
+                <td>32</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>資工</td>
+                <td>8</td>
+                <td>3</td>
+                <td>1</td>
+                <td>0.666</td>
+                <td>25</td>
+                <td>47</td>
+                <td>49</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>商船</td>
+                <td>7</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0.583</td>
+                <td>21</td>
+                <td>60</td>
+                <td>26</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>養殖</td>
+                <td>5</td>
+                <td>7</td>
+                <td>0</td>
+                <td>0.416</td>
+                <td>15</td>
+                <td>58</td>
+                <td>63</td>
+                <td>-5</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>海洋</td>
+                <td>4</td>
+                <td>8</td>
+                <td>0</td>
+                <td>0.333</td>
+                <td>12</td>
+                <td>45</td>
+                <td>60</td>
+                <td>-15</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>環漁</td>
+                <td>4</td>
+                <td>8</td>
+                <td>0</td>
+                <td>0.333</td>
+                <td>12</td>
+                <td>33</td>
+                <td>44</td>
+                <td>-11</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>輪機</td>
+                <td>3</td>
+                <td>8</td>
+                <td>1</td>
+                <td>0.250</td>
+                <td>10</td>
+                <td>50</td>
+                <td>70</td>
+                <td>-20</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>通訊</td>
+                <td>3</td>
+                <td>9</td>
+                <td>0</td>
+                <td>0.250</td>
+                <td>9</td>
+                <td>27</td>
+                <td>56</td>
+                <td>-29</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>造船</td>
+                <td>3</td>
+                <td>9</td>
+                <td>0</td>
+                <td>0.250</td>
+                <td>9</td>
+                <td>35</td>
+                <td>70</td>
+                <td>-35</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>電機</td>
+                <td>0</td>
+                <td>12</td>
+                <td>0</td>
+                <td>0.000</td>
+                <td>0</td>
+                <td>21</td>
+                <td>113</td>
+                <td>-92</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
